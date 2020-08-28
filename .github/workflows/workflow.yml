@@ -1,14 +1,21 @@
-name: CI
-on: push
+name: Release with goreleaser
+on:
+  push:
+    tags:
+      - v*.*.*
 jobs:
-  test:
-    runs-on: ubuntu-16.04
+  goreleaser:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: Unshallow Fetch
+        run: git fetch --prune --unshallow
+      - uses: actions/setup-go@v2
         with:
-          node-version: "12"
-      - run: npm ci
-      - run: npm test
-      - name: Release
-        run: npx semantic-release
+          go-version: "^1.15.0"
+      - name: Release via goreleaser
+        uses: goreleaser/goreleaser-action@master
+        with:
+          args: release
+        env:
+          GITHUB_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
