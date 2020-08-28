@@ -3,6 +3,7 @@ package main
 import "log"
 
 func main() {
+
 	num := calculate(9, 1)
 	log.Println(num)
 
