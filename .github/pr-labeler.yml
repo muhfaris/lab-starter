@@ -7,3 +7,6 @@ refactor: refactor/*
 performance: perf/*
 test: test/*
 continue-integration: ci/*
+major: major/*
+minor: minor/*
+patch: patch/*
