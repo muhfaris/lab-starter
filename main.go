@@ -13,6 +13,10 @@ func main() {
 	log.Println(x)
 
 	callAPI()
+
+	// login with email and username
+
+	// feature register
 }
 
 func calculate(x, i int) int {
