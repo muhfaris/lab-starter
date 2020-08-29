@@ -9,8 +9,8 @@ func main() {
 	num2 := sub(10, 9)
 	log.Println(num2)
 
-	xx := calculate(num, num2)
-	log.Println(xx)
+	x := calculate(num, num2)
+	log.Println(x)
 }
 
 func calculate(x, i int) int {
