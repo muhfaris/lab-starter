@@ -11,6 +11,8 @@ func main() {
 
 	x := calculate(num, num2)
 	log.Println(x)
+
+	callAPI()
 }
 
 func calculate(x, i int) int {
@@ -19,4 +21,7 @@ func calculate(x, i int) int {
 
 func sub(x, i int) int {
 	return x - i
+}
+
+func callAPI() {
 }
