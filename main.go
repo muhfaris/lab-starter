@@ -24,4 +24,9 @@ func sub(x, i int) int {
 }
 
 func callAPI() {
+	// read user
+
+	// create user
+
+	// update user
 }
