@@ -1,0 +1,13 @@
+run:
+  skip-dirs:
+
+linters:
+  enable:
+    - stylecheck
+    - gosec
+    - misspell
+    - sqlclosecheck
+    - gomnd
+    - golint
+  disable:
+    - errcheck
