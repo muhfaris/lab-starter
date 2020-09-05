@@ -27,7 +27,7 @@ func sub(x, i int) int {
 	return x - i
 }
 
-func callAPI() {
+func callAPI() error {
 	// read user
 
 	// create user
@@ -37,4 +37,5 @@ func callAPI() {
 	// delete user
 
 	// update status
+	return nil
 }
